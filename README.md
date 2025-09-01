@@ -1,4 +1,8 @@
 # MYGIS
+mygisRelease1.0是打包好的可运行程序
+Reports是课设汇报和说明书
+Slide是汇报PPT
+Source Code是源码
 一个GIS数据管理与分析系统，包括数据管理与存储、矢量数据 可视化与分析、栅格数据可视化与分析，矢量栅格三个模块。系统设计ui界面，分析操作有独立窗口。
 Software and Version:
 
