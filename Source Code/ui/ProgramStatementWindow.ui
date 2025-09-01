@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProgramStatementWindowClass</class>
+ <widget class="QDialog" name="ProgramStatementWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>667</width>
+    <height>502</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>程序说明</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="minimumSize">
+      <size>
+       <width>645</width>
+       <height>480</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>程序说明</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QPlainTextEdit" name="plainTextEdit_2">
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="plainText">
+          <string>MYGIS小程序
+由VS2022-17.10.3
+  QT5.14.2
+第三方库：
+  GDAL-3.9.0;
+  PROJ-9.3.0;
+  log4cpp-1.1.4;
+  qcustomplot-2.1.1联合开发
+
+ 该程序主要实现了以下功能：
+
+数据管理与存储：
+
+  支持输入 Shapefile、WKT、GeoJSON 格式的矢量数据，并在视图中绘制。
+支持输入 TIFF 栅格数据和超大栅格数据，并在视图中绘制。
+矢量数据可以存储为 Shapefile 或 WKT 文本文件，并且在内存中进行管理和编辑。
+
+矢量数据可视化与分析：
+
+  视图支持绘制 Shapefile、WKT、GeoJSON 矢量数据，以及栅格和超大栅格数据。
+视图可以进行放大缩小、复位缩放等操作，支持多图层并存，并能够进行编辑和分析。
+提供了多种图层操作功能，如缩放到图层、移除图层、隐藏/显示图层、打开属性表、改变图层颜色、移动图层顺序以及显示要素总数。
+
+空间统计与分析：
+
+  实现了凸包计算、叠加相交分析以及几何统计（如计算长度或面积）。
+
+栅格数据可视化与分析：
+
+  支持假彩色组合绘制栅格图像，绘制栅格波段的灰度直方图，并对栅格图像进行均衡化处理。
+支持超大栅格数据的分块处理和显示。
+
+  工程文件操作：
+
+  支持将当前视图中的矢量和栅格图层保存到工程文件，并能够重新打开工程文件并显示。
+工程文件记录了绘制时的颜色和图层顺序。
+
+编辑回退与日志记录：
+
+  支持对矢量要素的删除操作进行撤回。
+
+  程序能够生成日志文件 MYGIS_Log.log，记录程序的操作过程、警报信息等。
+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>程序帮助</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPlainTextEdit" name="plainTextEdit">
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="plainText">
+          <string>MYGIS小程序
+
+  可能还存在许多影藏的没有被发现的小BUG或者大BUG，所以为了保护您的文件安全和程序健康，请不要对程序进行不安全的操作！！！
+
+目前程序的一些危险操作和bug：
+
+  1.程序目前并不支持投影坐标的矢量图层导入，因为该程序并没有做有关投影操场的适配，一切操作都是在地理坐标系下进行。
+
+  2..叠加分析并不能很好的适应于任何情况，目前程序并不建议使用两个数据量较大的图层进行叠加分析不然会导致分析出错。
+
+  3.包络矩形转面不能对点图层进行操作，arcgis pro也不能，不知道为什么这个功能就有这种缺陷。
+
+  4.栅格目前对单波段的灰度栅格图形，不太适配，如果您导入的单波段绘制后并没有出现在视图中心，说明该图形绘制在了错误的位置，您可以导入一个图层然后再不断缩小视距就能看到单波段灰度图。
+
+  5.所有栅格分析操作不对单波段栅格和超大栅格开放。
+
+  6.要素转shapefile后再次导入属性表会有中文乱码，该原因是保存时设置了编码格式为GBK，请使用arcgis软件打开发现其属性表中文是正常的，只是程序读入图层时没有专门做编码筛选适配。
+
+  7.多个图层进行删除操作会发现视图并没有删除，但是属性表显示了删除，该操作是因为多个图层叠加导致了视觉暂留，除了最上层图层要素进行删除能正常进行，下方图层在视图中并不显示被删除。该操作的删除功能是正常的，只是QGraphicsView的绘制我没有做好适配。
+
+  8.工程保存功能不针对超大栅格和栅格分析操作后新加到视图中的新图层。</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

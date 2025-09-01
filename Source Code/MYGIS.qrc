@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/MYGIS">
+        <file>Iconres/Delete.png</file>
+        <file>Iconres/ExitEditing.png</file>
+        <file>Iconres/OKToSave.png</file>
+        <file>Iconres/Openproject.png</file>
+        <file>Iconres/Preview.png</file>
+        <file>Iconres/PreviewOff.png</file>
+        <file>Iconres/raster.png</file>
+        <file>Iconres/Saveproject.png</file>
+        <file>Iconres/shp.png</file>
+        <file>Iconres/StartEditing.png</file>
+        <file>Iconres/tool.png</file>
+        <file>Iconres/withdraw.png</file>
+        <file>Iconres/CSV.png</file>
+        <file>Iconres/SH.png</file>
+        <file>Iconres/author.png</file>
+        <file>Iconres/program.png</file>
+        <file>Iconres/Big.png</file>
+        <file>Iconres/logo.png</file>
+    </qresource>
+</RCC>
