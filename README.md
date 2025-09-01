@@ -1,5 +1,5 @@
 # MYGIS
-mygisRelease1.0是打包好的可运行程序
+**MYGISRelease1.0分支是打包好的可运行程序**
 Reports是课设汇报和说明书
 Slide是汇报PPT
 Source Code是源码
